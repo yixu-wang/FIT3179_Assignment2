@@ -1,0 +1,86 @@
+#AusMap {
+    top: 20px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+#PopulationPyramid {
+    margin-bottom: 50px;
+}
+
+
+.lobster-two-bold {
+    font-family: "Lobster Two", sans-serif;
+    font-style: normal;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-regular {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#title {
+    font-family: "Lobster Two", "sans-serif";
+    font-size: xxx-large;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.paragraphright {
+    font-family: 'Roboto';
+    font-style: normal;
+    line-height: 1.5;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+.paragraphleft {
+    font-family: 'Roboto';
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+.paragraphcentre {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: medium;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: "center";
+}
+
+#subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sectionhead {
+    font-family: 'Roboto';
+    font-style: bold;
+    font-size: x-large;
+    font-weight: 800;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.vis {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}

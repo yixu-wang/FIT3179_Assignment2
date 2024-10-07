@@ -8,17 +8,16 @@
       {"filter": "datum.DrinkLevel == DrinkLevelSelector"}
     ],
     "title": {
-      "text": "Alcohol consumption across age groups and gender",
-      "fontSize": 20,
-      "dy": -25
+      "text": "Alcohol consumption by age, gender, and consumption level",
+      "fontSize": 15,
+      "dy": -20
     },
     "spacing": 0,
     "hconcat": [
       {
         "transform": [{"filter": "datum.Gender == 'Male'"}],
-        "title": {"text": "Male", "fontWeight": 500, "fontSize": 15},
-        "width": 300,
-        "height": 250,
+        "title": {"text": "Male", "fontWeight": 500, "fontSize": 13},
+
         "mark": "bar",
         "encoding": {
           "x": {
@@ -33,9 +32,8 @@
       },
       {
         "transform": [{"filter": "datum.Gender == 'Female'"}],
-        "title": {"text": "Female", "fontWeight": 500, "fontSize": 15},
-        "width": 300,
-        "height": 250,
+        "title": {"text": "Female", "fontWeight": 500, "fontSize": 13},
+
         "mark": "bar",
         "encoding": {
           "x": {
@@ -60,7 +58,7 @@
             "10 standard drinks or less per week",
             "More than 10 standard drinks per week"
           ],
-          "name": "Drinking Level"
+          "name": "Consumption Level: "
         }
       }
     ],
