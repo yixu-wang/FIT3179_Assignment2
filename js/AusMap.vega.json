@@ -6,12 +6,57 @@
     "text": "Alcohol consumption by region (Statistical Area 4)",
     "subtitle": "Proportion of risky drinkers (more than 10 standard drinks per week or 4 standard drinks on a single day)"
   },
-  "projection": {"type": "mercator"},
+  "projection": {
+    "type": "equirectangular",
+    "center": {"expr": "Map_Centre"},
+    "scale": {"expr": "Zoom_Level"}
+  },
   "params": [
     {
       "name": "Year_Selector",
       "value": 2016,
       "bind": {"input": "select", "options": [2016, 2019, 2022]}
+    },
+    {
+      "name": "Zoom_Level",
+      "value": 600,
+      "bind": {
+        "input": "range",
+        "min": 600,
+        "max": 5000,
+        "step": 100,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "Map_Centre",
+      "value": [133.7751, -25.2744],
+      "bind": {
+        "input": "select",
+        "options": [
+          [133.7751, -25.2744],
+          [149.13, -35.2809],
+          [151.2093, -33.8688],
+          [130.8456, -12.4634],
+          [153.0281, -27.4679],
+          [138.6007, -34.9285],
+          [147.3257, -42.8821],
+          [144.9631, -37.8136],
+          [115.8575, -31.9505]
+        ],
+        "labels": [
+          "Australia",
+          "Australian Capital Territory",
+          "New South Wales",
+          "Northern Territory",
+          "Queensland",
+          "South Australia",
+          "Tasmania",
+          "Victoria",
+          "Western Australia"
+        ],
+        "name": "View: "
+      }
     }
   ],
   "layer": [
