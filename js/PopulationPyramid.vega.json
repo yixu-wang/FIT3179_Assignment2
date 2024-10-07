@@ -1,0 +1,68 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionByGender.csv"
+    },
+    "transform": [
+      {"calculate": "replace(datum.Age,' to ','–')", "as": "Age Group"},
+      {"filter": "datum.DrinkLevel == DrinkLevelSelector"}
+    ],
+    "title": {
+      "text": "Alcohol consumption across age groups and gender",
+      "fontSize": 20,
+      "dy": -25
+    },
+    "spacing": 0,
+    "hconcat": [
+      {
+        "transform": [{"filter": "datum.Gender == 'Male'"}],
+        "title": {"text": "Male", "fontWeight": 500, "fontSize": 15},
+        "width": 300,
+        "height": 250,
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "Proportion",
+            "type": "quantitative",
+            "sort": "descending",
+            "scale": {"domain": [0, 100]}
+          },
+          "y": {"field": "Age Group", "sort": "descending", "axis": null},
+          "color": {"field": "Gender", "legend": null}
+        }
+      },
+      {
+        "transform": [{"filter": "datum.Gender == 'Female'"}],
+        "title": {"text": "Female", "fontWeight": 500, "fontSize": 15},
+        "width": 300,
+        "height": 250,
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "Proportion",
+            "type": "quantitative",
+            "scale": {"domain": [0, 100]}
+          },
+          "y": {"field": "Age Group", "sort": "descending", "title": null},
+          "color": {"field": "Gender", "legend": null,"scale": {"range": ["purple","#00bcd4"]}}
+        }
+      }
+    ],
+    "params": [
+      {
+        "name": "DrinkLevelSelector",
+        "value": "abstain",
+        "bind": {
+          "input": "select",
+          "options": ["abstain", "safe", "risky"],
+          "labels": [
+            "Abstainers",
+            "10 standard drinks or less per week",
+            "More than 10 standard drinks per week"
+          ],
+          "name": "Drinking Level"
+        }
+      }
+    ],
+    "config": {"axis": {"grid": false}, "view": {"stroke": null}}
+  }
