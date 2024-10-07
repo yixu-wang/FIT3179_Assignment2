@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- fonts -->
   <!-- Lobster Two -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,96 +27,96 @@
 </head>
 
 
-<body class="vis">
+<body>
+  <div class="vis">
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <!-- Vis Headings-->
 
-  <div class="pure-g">
-    <div class="pure-u-1-1">
-      <!-- Vis Headings-->
+        <div id="title">
+          A glass half-full?
+        </div>
 
-      <div id="title">
-        A glass half-full?
-      </div>
+        <div id="subtitle">
+          Shifting attitudes towards alcohol consumption in Australia
+        </div>
+        <!-- Introduction -->
+        <div class="paragraphcentre">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
 
-      <div id="subtitle">
-        Shifting attitudes towards alcohol consumption in Australia
-      </div>
-      <!-- Introduction -->
-      <div class="paragraphcentre">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
+        <!-- Map Section-->
+        <div class="sectionhead">Alcohol Consumption By Region</div>
+        <div class="paragraphleft">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div id="AusMap">
+          <script type="text/javascript">
+            var spec1 = "js/AusMap.vg.json";
+            vegaEmbed('#AusMap', spec1).then(function (result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+          </script>
+        </div>
 
-      <!-- Map Section-->
-      <div class="sectionhead">Alcohol Consumption By Region</div>
-      <div class="paragraphleft">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </div>
-      <div id="AusMap">
-        <script type="text/javascript">
-          var spec1 = "js/AusMap.vg.json";
-          vegaEmbed('#AusMap', spec1).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-          }).catch(console.error);
-        </script>
-      </div>
-
     </div>
+
+    <!--Gender data section-->
+    <div class="sectionhead">Alcohol Consumer Demographics</div>
+    <div class="pure-g">
+
+      <div class="pure-u-1-2">
+
+        <div id="PopulationPyramid">
+          <script type="text/javascript">
+            var spec1 = "js/PopulationPyramid.vg.json";
+            vegaEmbed('#PopulationPyramid', spec1).then(function (result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+          </script>
+        </div>
+
+      </div>
+      <div class="pure-u-1-2">
+
+        <div class="paragraphright">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+
+    <!--Trends over time section-->
+    <div class="sectionhead">Consumption over Time</div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="paragraphleft">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+
+
+      </div>
+    </div>
+
   </div>
-
-  <!--Gender data section-->
-  <div class="sectionhead">Alcohol Consumer Demographics</div>
-  <div class="pure-g">
-
-    <div class="pure-u-1-2">
-
-      <div id="PopulationPyramid">
-        <script type="text/javascript">
-          var spec1 = "js/PopulationPyramid.vg.json";
-          vegaEmbed('#PopulationPyramid', spec1).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-          }).catch(console.error);
-        </script>
-      </div>
-
-    </div>
-    <div class="pure-u-1-2">
-
-      <div class="paragraphright">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-    </div>
-  </div>
-
-  <!--Trends over time section-->
-  <div class="sectionhead">Consumption over Time</div>
-  <div class="pure-g">
-    <div class="pure-u-1-2">
-      <div class="paragraphleft">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </div>
-    </div>
-    <div class="pure-u-1-2">
-      
-      
-    </div>
-  </div>
-
-
 </body>
 
 </html>
