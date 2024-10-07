@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 400,
+  "title": {
+    "text": "Alcohol consumption by region (Statistical Area 4)",
+    "subtitle": "Proportion of risky drinkers (more than 10 standard drinks per week or 4 standard drinks on a single day)"
+  },
+  "projection": {"type": "mercator"},
+  "params": [
+    {
+      "name": "Year_Selector",
+      "value": 2016,
+      "bind": {"input": "select", "options": [2016, 2019, 2022]}
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "name": "ausmap",
+        "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/SA4_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+      },
+      "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "white"},
+      "encoding": {
+        "tooltip": {
+          "value": {"expr": "'SA Name: ' + datum.properties.SA4_NAME21"}
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionByRegion.csv"
+      },
+      "transform": [
+        {
+          "lookup": "SA4",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/SA4_2021_AUST_GDA2020.json",
+              "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+            },
+            "key": "properties.SA4_CODE21"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.Year == Year_Selector"}
+      ],
+      "mark": {"type": "geoshape"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Proportion",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [20, 30, 40],
+            "range": ["#abceed", "#66b0ff", "#006fe6", "#003e80"]
+          }
+        },
+        "tooltip": [
+          {"field": "SA4_Name", "title": "SA Name:", "type": "nominal"},
+          {"field": "SA4", "title": "SA Code"},
+          {"field": "Proportion", "type": "quantitative"}
+        ]
+      }
+    }
+  ]
+}
