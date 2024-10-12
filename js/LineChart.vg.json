@@ -4,8 +4,9 @@
     "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholVapeYouth.csv"
   },
   "title": {
-    "text": "Proportion of alcohol and e-cigarette users over time for ages 14 to 24",
-    "offset": 20
+    "text": "Alcohol and e-cigarette use over time, ages 14 to 24",
+    "offset": 20,
+    "fontSize": 18
   },
 "transform": [
     {
@@ -24,6 +25,7 @@
   ],
   "facet": {"column": {"field": "Age group", "type": "nominal"}},
   "spec": {
+    "height":300,
     "width": "container",
     "encoding": {
       "color": {"field": "Type", "legend": {"symbolType": "stroke"}}

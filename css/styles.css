@@ -14,14 +14,13 @@
 
 #HorizonChart { 
     width: 360px;
-    height: 45px;
     margin-left: 10px;
     margin-bottom: 50px;
 }
 
 #LineChart {
     width: 40%;
-    height: 300px;
+    height: 500px;
     margin-bottom: 50px;
 }
 

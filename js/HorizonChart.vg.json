@@ -5,7 +5,7 @@
   },
   "title": {
     "text": "Risky alcohol consumption over time, by age (Interpolated)",
-    "fontSize": 20,
+    "fontSize": 18,
     "offset": 20
   },
   "transform": [
@@ -54,7 +54,7 @@
   },
   "spec": {
     "width": "container",
-    "height": "container",
+    "height": 50,
     "encoding": {
       "color": {
         "field": "relative_change",

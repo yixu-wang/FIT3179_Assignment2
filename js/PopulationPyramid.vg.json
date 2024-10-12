@@ -11,13 +11,19 @@
   "title": {
     "text": "Alcohol consumption by age and gender in 2022",
     "fontSize": 18,
-    "offset": 20
+    "offset": 20,
+    "subtitle": "Gender",
+    "align": "center",
+    "anchor": "middle",
+    "subtitleFontSize": 12,
+    "subtitleFontWeight":"bold",
+    "subtitlePadding": 15
   },
   "spacing": 0,
   "hconcat": [
     {
       "transform": [{"filter": "datum.Gender == 'Male'"}],
-      "title": {"text": "Male", "fontWeight": 500, "fontSize": 13},
+      "title": {"text": "Male", "fontWeight": 500, "fontSize": 11},
       "mark": "bar",
       "encoding": {
         "x": {
@@ -36,7 +42,7 @@
     },
     {
       "transform": [{"filter": "datum.Gender == 'Female'"}],
-      "title": {"text": "Female", "fontWeight": 500, "fontSize": 13},
+      "title": {"text": "Female", "fontWeight": 500, "fontSize": 11},
       "mark": "bar",
       "encoding": {
         "x": {

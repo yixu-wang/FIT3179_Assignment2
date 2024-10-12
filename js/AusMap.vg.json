@@ -80,6 +80,7 @@
         "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionByRegion.csv"
       },
       "transform": [
+        {"calculate": "datum.Proportion/100", "as":"Proportion_frac"},
         {
           "lookup": "SA4",
           "from": {
@@ -106,9 +107,9 @@
           }
         },
         "tooltip": [
-          {"field": "SA4_Name", "title": "SA Name:", "type": "nominal"},
-          {"field": "SA4", "title": "SA Code"},
-          {"field": "Proportion", "type": "quantitative"}
+          {"field": "SA4_Name", "title": "Region:", "type": "nominal"},
+          {"field": "Year"},
+          {"field": "Proportion_frac", "type": "quantitative","format":".1%"}
         ]
       }
     }
