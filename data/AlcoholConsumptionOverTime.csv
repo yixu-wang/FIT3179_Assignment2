@@ -1,145 +1,65 @@
 Age group,Year,Level,Proportion
-14 to 17,2007,Abstainers,39.1
-18 to 24,2007,Abstainers,13.1
-25 to 29,2007,Abstainers,11.8
-30 to 39,2007,Abstainers,12.4
-40 to 49,2007,Abstainers,12.4
-50 to 59,2007,Abstainers,14.4
-60 to 69,2007,Abstainers,21.2
-70+,2007,Abstainers,29.8
-14 to 17,2010,Abstainers,49.3
-18 to 24,2010,Abstainers,14.6
-25 to 29,2010,Abstainers,15.5
-30 to 39,2010,Abstainers,15.9
-40 to 49,2010,Abstainers,14.5
-50 to 59,2010,Abstainers,16.7
-60 to 69,2010,Abstainers,19.9
-70+,2010,Abstainers,31.4
-14 to 17,2013,Abstainers,60.8
-18 to 24,2013,Abstainers,16.4
-25 to 29,2013,Abstainers,15.5
-30 to 39,2013,Abstainers,17.1
-40 to 49,2013,Abstainers,15.4
-50 to 59,2013,Abstainers,16.2
-60 to 69,2013,Abstainers,20.4
-70+,2013,Abstainers,32.0
-14 to 17,2016,Abstainers,73.1
-18 to 24,2016,Abstainers,18.1
-25 to 29,2016,Abstainers,19.0
-30 to 39,2016,Abstainers,16.6
-40 to 49,2016,Abstainers,16.2
-50 to 59,2016,Abstainers,17.4
-60 to 69,2016,Abstainers,21.2
-70+,2016,Abstainers,30.1
-14 to 17,2019,Abstainers,72.5
-18 to 24,2019,Abstainers,20.8
-25 to 29,2019,Abstainers,23.6
-30 to 39,2019,Abstainers,21.8
-40 to 49,2019,Abstainers,17.8
-50 to 59,2019,Abstainers,16.5
-60 to 69,2019,Abstainers,19.9
-70+,2019,Abstainers,27.5
-14 to 17,2022,Abstainers,69.9
-18 to 24,2022,Abstainers,22.9
-25 to 29,2022,Abstainers,21.7
-30 to 39,2022,Abstainers,22.6
-40 to 49,2022,Abstainers,19.2
-50 to 59,2022,Abstainers,16.0
-60 to 69,2022,Abstainers,16.9
-70+,2022,Abstainers,25.4
-14 to 17,2007,Safe,49.4
-18 to 24,2007,Safe,46.3
-25 to 29,2007,Safe,51.1
-30 to 39,2007,Safe,56.3
-40 to 49,2007,Safe,55.3
-50 to 59,2007,Safe,54.5
-60 to 69,2007,Safe,50.4
-70+,2007,Safe,43.5
-14 to 17,2010,Safe,42.1
-18 to 24,2010,Safe,46.2
-25 to 29,2010,Safe,51.1
-30 to 39,2010,Safe,52.9
-40 to 49,2010,Safe,54.2
-50 to 59,2010,Safe,51.2
-60 to 69,2010,Safe,49.5
-70+,2010,Safe,42.6
-14 to 17,2013,Safe,33.9
-18 to 24,2013,Safe,53.8
-25 to 29,2013,Safe,54.7
-30 to 39,2013,Safe,56.5
-40 to 49,2013,Safe,52.8
-50 to 59,2013,Safe,52.2
-60 to 69,2013,Safe,48.5
-70+,2013,Safe,43.7
-14 to 17,2016,Safe,23.9
-18 to 24,2016,Safe,56.2
-25 to 29,2016,Safe,55.2
-30 to 39,2016,Safe,56.8
-40 to 49,2016,Safe,53.3
-50 to 59,2016,Safe,52.5
-60 to 69,2016,Safe,50.2
-70+,2016,Safe,45.5
-14 to 17,2019,Safe,24.0
-18 to 24,2019,Safe,54.0
-25 to 29,2019,Safe,51.2
-30 to 39,2019,Safe,55.4
-40 to 49,2019,Safe,55.1
-50 to 59,2019,Safe,53.9
-60 to 69,2019,Safe,51.8
-70+,2019,Safe,48.0
-14 to 17,2022,Safe,28.4
-18 to 24,2022,Safe,49.0
-25 to 29,2022,Safe,56.4
-30 to 39,2022,Safe,53.2
-40 to 49,2022,Safe,54.3
-50 to 59,2022,Safe,56.9
-60 to 69,2022,Safe,53.2
-70+,2022,Safe,51.0
-14 to 17,2007,Risky,11.5
-18 to 24,2007,Risky,40.6
-25 to 29,2007,Risky,37.1
-30 to 39,2007,Risky,31.3
-40 to 49,2007,Risky,32.3
-50 to 59,2007,Risky,31.1
-60 to 69,2007,Risky,28.4
-70+,2007,Risky,26.7
-14 to 17,2010,Risky,8.7
-18 to 24,2010,Risky,39.2
-25 to 29,2010,Risky,33.4
-30 to 39,2010,Risky,31.2
-40 to 49,2010,Risky,31.3
-50 to 59,2010,Risky,32.1
-60 to 69,2010,Risky,30.6
-70+,2010,Risky,26.0
-14 to 17,2013,Risky,5.3
-18 to 24,2013,Risky,29.9
-25 to 29,2013,Risky,29.8
-30 to 39,2013,Risky,26.5
-40 to 49,2013,Risky,31.8
-50 to 59,2013,Risky,31.5
-60 to 69,2013,Risky,31.1
-70+,2013,Risky,24.3
-14 to 17,2016,Risky,3.0
-18 to 24,2016,Risky,25.7
-25 to 29,2016,Risky,25.9
-30 to 39,2016,Risky,26.6
-40 to 49,2016,Risky,30.5
-50 to 59,2016,Risky,30.2
-60 to 69,2016,Risky,28.6
-70+,2016,Risky,24.4
-14 to 17,2019,Risky,3.4
-18 to 24,2019,Risky,25.2
-25 to 29,2019,Risky,25.2
-30 to 39,2019,Risky,22.9
-40 to 49,2019,Risky,27.1
-50 to 59,2019,Risky,29.6
-60 to 69,2019,Risky,28.2
-70+,2019,Risky,24.5
-14 to 17,2022,Risky,1.6
-18 to 24,2022,Risky,28.1
-25 to 29,2022,Risky,21.9
-30 to 39,2022,Risky,24.2
-40 to 49,2022,Risky,26.5
-50 to 59,2022,Risky,27.0
-60 to 69,2022,Risky,29.9
-70+,2022,Risky,23.6
+14 to 17,2001,Risky,30.7
+18 to 24,2001,Risky,58.5
+25 to 29,2001,Risky,47.6
+30 to 39,2001,Risky,37.8
+40 to 49,2001,Risky,36.0
+50 to 59,2001,Risky,34.9
+60 to 69,2001,Risky,28.0
+70+,2001,Risky,29.2
+14 to 17,2004,Risky,25.9
+18 to 24,2004,Risky,58.4
+25 to 29,2004,Risky,48.3
+30 to 39,2004,Risky,40.5
+40 to 49,2004,Risky,39.3
+50 to 59,2004,Risky,34.7
+60 to 69,2004,Risky,33.0
+70+,2004,Risky,27.9
+14 to 17,2007,Risky,24.8
+18 to 24,2007,Risky,55.2
+25 to 29,2007,Risky,49.0
+30 to 39,2007,Risky,39.6
+40 to 49,2007,Risky,38.2
+50 to 59,2007,Risky,35.5
+60 to 69,2007,Risky,30.5
+70+,2007,Risky,27.5
+14 to 17,2010,Risky,20.7
+18 to 24,2010,Risky,55.6
+25 to 29,2010,Risky,45.1
+30 to 39,2010,Risky,39.3
+40 to 49,2010,Risky,37.6
+50 to 59,2010,Risky,35.7
+60 to 69,2010,Risky,32.8
+70+,2010,Risky,26.6
+14 to 17,2013,Risky,13.2
+18 to 24,2013,Risky,49.4
+25 to 29,2013,Risky,41.0
+30 to 39,2013,Risky,34.5
+40 to 49,2013,Risky,38.0
+50 to 59,2013,Risky,36.2
+60 to 69,2013,Risky,32.9
+70+,2013,Risky,24.9
+14 to 17,2016,Risky,8.2
+18 to 24,2016,Risky,43.1
+25 to 29,2016,Risky,38.3
+30 to 39,2016,Risky,35.9
+40 to 49,2016,Risky,36.4
+50 to 59,2016,Risky,34.9
+60 to 69,2016,Risky,30.4
+70+,2016,Risky,25.0
+14 to 17,2019,Risky,9.5
+18 to 24,2019,Risky,41.8
+25 to 29,2019,Risky,37.9
+30 to 39,2019,Risky,30.6
+40 to 49,2019,Risky,34.6
+50 to 59,2019,Risky,35.2
+60 to 69,2019,Risky,31.3
+70+,2019,Risky,25.9
+14 to 17,2022,Risky,5.5
+18 to 24,2022,Risky,41.8
+25 to 29,2022,Risky,34.0
+30 to 39,2022,Risky,32.0
+40 to 49,2022,Risky,33.0
+50 to 59,2022,Risky,32.3
+60 to 69,2022,Risky,33.2
+70+,2022,Risky,24.9
