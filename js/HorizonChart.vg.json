@@ -5,8 +5,8 @@
   },
   "title": {
     "text": "Risky alcohol consumption over time, by age (Interpolated)",
-    "fontSize": 15,
-    "offset":20
+    "fontSize": 20,
+    "offset": 20
   },
   "transform": [
     {"filter": "datum.Level == 'Risky'"},
@@ -55,6 +55,27 @@
   "spec": {
     "width": "container",
     "height": "container",
+    "encoding": {
+      "color": {
+        "field": "relative_change",
+        "scale": {
+          "type": "quantize",
+          "range": ["#4575b4", "#b4c8e1", "#fb9a99", "#d73027"],
+          "domain": [-100, 100]
+        },
+        "title": ["% Change in", "Proportion", "since 2001"],
+        "legend": {"values": [-100, -100, -50, 0, 50, 100], "titlePadding": 10}
+      },
+      "tooltip": [
+        {"field": "Age group"},
+        {
+          "field": "relative_change_frac",
+          "title": "% change since 2001",
+          "format": ".2%"
+        },
+        {"field": "ordYear", "title": "Year"}
+      ]
+    },
     "layer": [
       {
         "mark": {"type": "area", "clip": true, "opacity": 1},
@@ -74,15 +95,7 @@
         "encoding": {
           "x": {"field": "Year", "type": "temporal"},
           "y": {"field": "positive_change", "type": "quantitative"},
-          "color": {"value": "#d73027"},
-          "tooltip": [
-            {
-              "field": "relative_change_frac",
-              "title": "% change since 2001",
-              "format": ".2%"
-            },
-            {"field": "ordYear", "title": "Year"}
-          ]
+          "color": {"value": "#d73027"}
         }
       },
       {
@@ -97,20 +110,7 @@
         "mark": {"type": "area", "clip": true, "opacity": 0},
         "encoding": {
           "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "negative_change", "type": "quantitative"},
-          "color": {
-            "field": "relative_change",
-            "scale": {
-              "type": "quantize",
-              "range": ["#4575b4", "#b4c8e1", "#fb9a99", "#d73027"],
-              "domain": [-100, 100]
-            },
-            "title": ["% Change in", "Proportion", "since 2001"],
-            "legend": {
-              "values": [-100, -100, -50, 0, 50, 100],
-              "titlePadding": 10
-            }
-          }
+          "y": {"field": "negative_change", "type": "quantitative"}
         }
       },
       {
@@ -118,15 +118,7 @@
         "encoding": {
           "x": {"field": "Year", "type": "temporal"},
           "y": {"field": "negative_change", "type": "quantitative"},
-          "color": {"value": "#4575b4"},
-          "tooltip": [
-            {
-              "field": "relative_change_frac",
-              "title": "% change since 2001",
-              "format": ".2%"
-            },
-            {"field": "ordYear", "title": "Year"}
-          ]
+          "color": {"value": "#4575b4"}
         }
       }
     ]

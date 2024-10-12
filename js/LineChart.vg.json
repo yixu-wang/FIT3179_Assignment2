@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholVapeYouth.csv"
+  },
+  "title": {
+    "text": "Proportion of alcohol and e-cigarette users over time for ages 14 to 24",
+    "offset": 20
+  },
+"transform": [
+    {
+      "filter": "(datum['Age group'] == '14 to 17' | datum['Age group'] == '18 to 24')"
+    },
+    {
+      "calculate": "datum.Type == 'Alcohol' ? datum.Proportion : null",
+      "as": "alcohol"
+    },
+    {
+      "calculate": "datum.Type == 'Vape' ? datum.Proportion : null",
+      "as": "vape"
+    },
+    {"calculate": "datum.Proportion/100", "as": "Proportion"},
+    {"calculate": "datum.Proportion*100", "as": "Proportion_pct"}
+  ],
+  "facet": {"column": {"field": "Age group", "type": "nominal"}},
+  "spec": {
+    "width": "container",
+    "encoding": {
+      "color": {"field": "Type", "legend": {"symbolType": "stroke"}}
+    },
+    "layer": [
+      {
+        "mark": {"type": "line"},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {
+            "field": "Proportion_pct",
+            "type": "quantitative",
+            "scale": {"domain": [0, 100]},
+            "title": "Proportion"
+          }
+        }
+      },
+      {
+        "transform": [
+          {
+            "pivot": "Type",
+            "value": "Proportion",
+            "groupby": ["Age group", "Year"]
+          }
+        ],
+        "mark": {"type": "rule"},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {"param": "brush", "empty": false, "value": 1},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Year", "timeUnit": "year", "title": "Year"},
+            {"field": "Age group"},
+            {"field": "Alcohol", "type": "quantitative", "format": ".1%"},
+            {"field": "Vape", "type": "quantitative", "format": ".1%"}
+          ]
+        },
+        "params": [
+          {
+            "name": "brush",
+            "select": {
+              "fields": ["Age group", "Year"],
+              "type": "point",
+              "on": "pointerover",
+              "nearest": true
+            }
+          }
+        ]
+      },
+      {
+        "mark": {"type": "point", "filled": true},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {"field": "Proportion_pct", "type": "quantitative"},
+          "opacity": {
+            "condition": {"param": "brush", "empty": false, "value": 1},
+            "value": 0
+          }
+        }
+      }
+    ]
+  }
+}

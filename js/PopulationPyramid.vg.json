@@ -10,8 +10,8 @@
   ],
   "title": {
     "text": "Alcohol consumption by age and gender in 2022",
-    "fontSize": 15,
-    "dy": -20
+    "fontSize": 18,
+    "offset": 20
   },
   "spacing": 0,
   "hconcat": [
