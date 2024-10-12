@@ -1,64 +1,77 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionByGender.csv"
-    },
-    "transform": [
-      {"calculate": "replace(datum.Age,' to ','–')", "as": "Age Group"},
-      {"filter": "datum.DrinkLevel == DrinkLevelSelector"}
-    ],
-    "title": {
-      "text": "Alcohol consumption by age and gender",
-      "fontSize": 15,
-      "dy": -20
-    },
-    "spacing": 0,
-    "hconcat": [
-      {
-        "transform": [{"filter": "datum.Gender == 'Male'"}],
-        "title": {"text": "Male", "fontWeight": 500, "fontSize": 13},
-        "mark": "bar",
-        "encoding": {
-          "x": {
-            "field": "Proportion",
-            "type": "quantitative",
-            "sort": "descending",
-            "scale": {"domain": [0, 100]}
-          },
-          "y": {"field": "Age Group", "sort": "descending", "axis": null},
-          "color": {"field": "Gender", "legend": null}
-        }
-      },
-      {
-        "transform": [{"filter": "datum.Gender == 'Female'"}],
-        "title": {"text": "Female", "fontWeight": 500, "fontSize": 13},
-        "mark": "bar",
-        "encoding": {
-          "x": {
-            "field": "Proportion",
-            "type": "quantitative",
-            "scale": {"domain": [0, 100]}
-          },
-          "y": {"field": "Age Group", "sort": "descending", "title": null},
-          "color": {"field": "Gender", "legend": null,"scale": {"range": ["purple","#00bcd4"]}}
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionByGender.csv"
+  },
+  "transform": [
+    {"calculate": "replace(datum.Age,' to ','–')", "as": "Age Group"},
+    {"filter": "datum.DrinkLevel == DrinkLevelSelector"},
+    {"calculate": "datum.Proportion/100", "as": "Proportion_frac"}
+  ],
+  "title": {
+    "text": "Alcohol consumption by age and gender",
+    "fontSize": 15,
+    "dy": -20
+  },
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [{"filter": "datum.Gender == 'Male'"}],
+      "title": {"text": "Male", "fontWeight": 500, "fontSize": 13},
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Proportion",
+          "type": "quantitative",
+          "sort": "descending",
+          "scale": {"domain": [0, 100]}
+        },
+        "y": {"field": "Age Group", "sort": "descending", "axis": null},
+        "color": {"field": "Gender", "legend": null},
+        "tooltip": [
+          {"field": "Age", "title": "Age group"},
+          {"field": "Proportion_frac", "type": "quantitative", "format": ".1%"}
+        ]
       }
-    ],
-    "params": [
-      {
-        "name": "DrinkLevelSelector",
-        "value": "abstain",
-        "bind": {
-          "input": "select",
-          "options": ["abstain", "safe", "risky"],
-          "labels": [
-            "Abstainers",
-            "≤10 standard drinks per week",
-            ">10 standard drinks per week"
-          ],
-          "name": "Consumption Level: "
-        }
+    },
+    {
+      "transform": [{"filter": "datum.Gender == 'Female'"}],
+      "title": {"text": "Female", "fontWeight": 500, "fontSize": 13},
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Proportion",
+          "type": "quantitative",
+          "scale": {"domain": [0, 100]}
+        },
+        "y": {"field": "Age Group", "sort": "descending", "title": null},
+        "color": {
+          "field": "Gender",
+          "legend": null,
+          "scale": {"range": ["purple", "#00bcd4"]}
+        },
+        "tooltip": [
+          {"field": "Age", "title": "Age group"},
+          {"field": "Proportion_frac", "type": "quantitative", "format": ".1%"}
+        ]
       }
-    ],
-    "config": {"axis": {"grid": false}, "view": {"stroke": null}}
-  }
+    }
+  ],
+  "params": [
+    {
+      "name": "DrinkLevelSelector",
+      "value": "abstain",
+      "bind": {
+        "input": "select",
+        "options": ["abstain", "safe", "risky"],
+        "labels": [
+          "Abstainers",
+          "≤10 standard drinks per week",
+          ">10 standard drinks per week"
+        ],
+        "name": "Consumption Level: "
+      }
+    }
+  ],
+  "config": {"axis": {"grid": false}, "view": {"stroke": null}}
+}

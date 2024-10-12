@@ -3,8 +3,11 @@
   "data": {
     "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionOverTime.csv"
   },
-  "title": {"text":"Risky Alcohol Consumption over Time, by Age (Interpolated)","fontSize":15},
-  "config": {"grid": {"stroke": null}},
+  "title": {
+    "text": "Risky Alcohol Consumption over Time, by Age (Interpolated)",
+    "fontSize": 15,
+    "offset":20
+  },
   "transform": [
     {"filter": "datum.Level == 'Risky'"},
     {"calculate": "replace(datum['Age group'],' to ','–')", "as": "Age"},
@@ -35,6 +38,10 @@
     {
       "calculate": "datum.negative_change >= 50 ? abs(datum.negative_change)-50 : 0",
       "as": "large_negative_change"
+    },
+    {
+      "calculate": "(datum.Proportion - datum.first_value) / datum.first_value",
+      "as": "relative_change_frac"
     }
   ],
   "spacing": {"row": 5},
@@ -46,8 +53,6 @@
     }
   },
   "spec": {
-    "width": "container",
-    "height": "container",
     "layer": [
       {
         "mark": {"type": "area", "clip": true, "opacity": 1},
@@ -70,9 +75,9 @@
           "color": {"value": "#d73027"},
           "tooltip": [
             {
-              "field": "relative_change",
+              "field": "relative_change_frac",
               "title": "% change since 2007",
-              "format": ".2f"
+              "format": ".2%"
             },
             {"field": "ordYear", "title": "Year"}
           ]
@@ -83,14 +88,6 @@
         "encoding": {
           "x": {"field": "Year", "type": "temporal"},
           "y": {"field": "large_negative_change", "type": "quantitative"},
-          "color": {"value": "#4575b4"}
-        }
-      },
-      {
-        "mark": {"type": "area", "clip": true, "opacity": 0.4},
-        "encoding": {
-          "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "negative_change", "type": "quantitative"},
           "color": {"value": "#4575b4"}
         }
       },
@@ -111,12 +108,20 @@
               "values": [-100, -100, -50, 0, 50, 100],
               "titlePadding": 10
             }
-          },
+          }
+        }
+      },
+      {
+        "mark": {"type": "area", "clip": true, "opacity": 0.4},
+        "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {"field": "negative_change", "type": "quantitative"},
+          "color": {"value": "#4575b4"},
           "tooltip": [
             {
-              "field": "relative_change",
+              "field": "relative_change_frac",
               "title": "% change since 2007",
-              "format": ".2f"
+              "format": ".2%"
             },
             {"field": "ordYear", "title": "Year"}
           ]
