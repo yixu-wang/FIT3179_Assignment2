@@ -78,7 +78,7 @@
           "tooltip": [
             {
               "field": "relative_change_frac",
-              "title": "% change since 2007",
+              "title": "% change since 2001",
               "format": ".2%"
             },
             {"field": "ordYear", "title": "Year"}
@@ -105,7 +105,7 @@
               "range": ["#4575b4", "#b4c8e1", "#fb9a99", "#d73027"],
               "domain": [-100, 100]
             },
-            "title": ["% Change in", "Proportion", "since 2007"],
+            "title": ["% Change in", "Proportion", "since 2001"],
             "legend": {
               "values": [-100, -100, -50, 0, 50, 100],
               "titlePadding": 10
@@ -122,7 +122,7 @@
           "tooltip": [
             {
               "field": "relative_change_frac",
-              "title": "% change since 2007",
+              "title": "% change since 2001",
               "format": ".2%"
             },
             {"field": "ordYear", "title": "Year"}
