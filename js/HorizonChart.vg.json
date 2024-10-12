@@ -53,6 +53,8 @@
     }
   },
   "spec": {
+    "width": "container",
+    "height": "container",
     "layer": [
       {
         "mark": {"type": "area", "clip": true, "opacity": 1},
