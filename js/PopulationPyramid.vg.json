@@ -9,7 +9,7 @@
     {"calculate": "datum.Proportion/100", "as": "Proportion_frac"}
   ],
   "title": {
-    "text": "Alcohol consumption by age and gender",
+    "text": "Alcohol consumption by age and gender in 2022",
     "fontSize": 15,
     "dy": -20
   },

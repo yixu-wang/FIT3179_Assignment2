@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/yixu-wang/FIT3179_Assignment2/refs/heads/main/data/AlcoholConsumptionOverTime.csv"
   },
   "title": {
-    "text": "Risky Alcohol Consumption over Time, by Age (Interpolated)",
+    "text": "Risky alcohol consumption over time, by age (Interpolated)",
     "fontSize": 15,
     "offset":20
   },
