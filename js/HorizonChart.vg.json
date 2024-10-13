@@ -42,6 +42,10 @@
     {
       "calculate": "(datum.Proportion - datum.first_value) / datum.first_value",
       "as": "relative_change_frac"
+    },
+    {
+      "calculate": "datum.Proportion/100",
+      "as": "proportion_frac"
     }
   ],
   "spacing": {"row": 5},
@@ -63,7 +67,7 @@
           "range": ["#4575b4", "#b4c8e1", "#fb9a99", "#d73027"],
           "domain": [-100, 100]
         },
-        "title": ["% Change in", "Proportion", "since 2001"],
+        "title": ["% Change in", "proportion", "since 2001"],
         "legend": {"values": [-100, -100, -50, 0, 50, 100], "titlePadding": 10}
       },
       "tooltip": [
@@ -73,7 +77,8 @@
           "title": "% change since 2001",
           "format": ".2%"
         },
-        {"field": "ordYear", "title": "Year"}
+        {"field": "ordYear", "title": "Year"},
+        {"field": "proportion_frac","title":"Proportion","format":".1%"}
       ]
     },
     "layer": [

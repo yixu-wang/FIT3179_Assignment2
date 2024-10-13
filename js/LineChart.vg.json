@@ -60,10 +60,10 @@
             "value": 0
           },
           "tooltip": [
-            {"field": "Year", "timeUnit": "year", "title": "Year"},
-            {"field": "Age group"},
-            {"field": "Alcohol", "type": "quantitative", "format": ".1%"},
-            {"field": "Vape", "type": "quantitative", "format": ".1%"}
+            {"field": "Year", "timeUnit": "year", "title": "Year: "},
+            {"field": "Age group","title": "Age group: "},
+            {"field": "Alcohol", "type": "quantitative", "format": ".1%","title":"Alcohol: "},
+            {"field": "Vape", "type": "quantitative", "format": ".1%","title":"E-cigarettes: "}
           ]
         },
         "params": [
