@@ -22,6 +22,7 @@
   "spacing": 0,
   "hconcat": [
     {
+      "height": 300,
       "transform": [{"filter": "datum.Gender == 'Male'"}],
       "title": {"text": "Male", "fontWeight": 500, "fontSize": 11},
       "mark": "bar",
@@ -42,6 +43,7 @@
       }
     },
     {
+      "height": 300,
       "transform": [{"filter": "datum.Gender == 'Female'"}],
       "title": {"text": "Female", "fontWeight": 500, "fontSize": 11},
       "mark": "bar",
@@ -75,8 +77,8 @@
         "options": ["abstain", "safe", "risky"],
         "labels": [
           "Abstainers",
-          "≤10 standard drinks per week",
-          ">10 standard drinks per week"
+          "Not at risk",
+          "Risky"
         ],
         "name": "Consumption Level: "
       }
