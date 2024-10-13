@@ -36,7 +36,8 @@
         "color": {"field": "Gender", "legend": null},
         "tooltip": [
           {"field": "Age", "title": "Age group"},
-          {"field": "Proportion_frac", "type": "quantitative", "format": ".1%"}
+          {"field": "Gender"},
+          {"field": "Proportion_frac","title": "Proportion", "type": "quantitative", "format": ".1%"}
         ]
       }
     },
@@ -58,7 +59,9 @@
         },
         "tooltip": [
           {"field": "Age", "title": "Age group"},
-          {"field": "Proportion_frac", "type": "quantitative", "format": ".1%"}
+          {"field": "Gender"},
+          {"field": "Proportion_frac", "type": "quantitative", "format": ".1%",
+        "title": "Proportion"}
         ]
       }
     }
@@ -66,7 +69,7 @@
   "params": [
     {
       "name": "DrinkLevelSelector",
-      "value": "abstain",
+      "value": "risky",
       "bind": {
         "input": "select",
         "options": ["abstain", "safe", "risky"],
