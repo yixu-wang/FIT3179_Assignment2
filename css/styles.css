@@ -68,8 +68,8 @@
 .paragraphcentre {
     font-family: 'Roboto';
     font-style: normal;
-    color: dimgray;
-    font-size: x-large;
+    color: #555;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
     text-align: "center";

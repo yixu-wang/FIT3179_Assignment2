@@ -18,7 +18,7 @@
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <!-- CSS files -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
     integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
@@ -42,21 +42,21 @@
         </div>
         <!-- Introduction -->
         <div class="paragraphcentre">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Alcohol holds an undeniable place in Australian culture. Consumed by roughly three-quarters of Australians
+          14 years and above [1], alcoholic beverages are arguably some of Australians' favourite drinks. Yet our love
+          of alcohol also makes us particularly susceptible to the harms that stem from the abuse of this euphoric
+          substance.
+          To address this, numerous strategies, such as the government's National Drug Strategy [3],
+          have been developed in part to reduce the risky consumption of alcohol. But just how successful have these
+          policies been?
+
         </div>
 
         <!-- Map Section-->
         <div class="sectionhead">Alcohol Consumption By Region</div>
         <div class="paragraphleft">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Interact with the map above to see the geographic distribution of risky consumers of alcohol (more than 
+          4 standard drinks a day or 10 standard drinks a week), as defined by the National Health and Medical Research Council (NHMRC) guidelines.  
         </div>
         <div id="AusMap">
           <script type="text/javascript">
@@ -66,7 +66,17 @@
             }).catch(console.error);
           </script>
         </div>
+        <div class="paragraphleft">
+          A quick glance at the data through time shows that rural populations are generally riskier drinkers, with the 
+          outback regions in Western Australia, South Australia, and the Northern Territory consistently remaining hotspots throughout the recorded period. 
+          Several potential reasons have been proposed, including the strong drinking culture in remote communities, 
+          the lack of entertainment options, and limited access to health services [3]. 
+          <br><br>
+          Conversely, the map also suggests that heavy consumption is falling in the cities, particularly in Victoria, New South Wales, and the Australian Capital Territory. 
+          Whether this is due to effective messaging is impossible to determine from the visualised data. However, the data does suggest a need for 
+          a different approach towards rural populations - one that addresses the issues mentioned above.
 
+        </div>
       </div>
     </div>
 
@@ -123,34 +133,34 @@
       </div>
     </div>
 
-        <!--Youth alcohol and e-cigarette use section-->
-        <div class="sectionhead">Alcohol and e-cigarette use in youth</div>
-        <div class="pure-g section">
+    <!--Youth alcohol and e-cigarette use section-->
+    <div class="sectionhead">Alcohol and e-cigarette use in youth</div>
+    <div class="pure-g section">
 
-          <div class="pure-u-1-2">
+      <div class="pure-u-1-2">
 
-            <div id="LineChart">
-              <script type="text/javascript">
-                var spec4 = "js/LineChart.vg.json";
-                vegaEmbed('#LineChart', spec4).then(function (result) {
-                  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                }).catch(console.error);
-              </script>
-            </div>
-    
-          </div>
-          
-          <div class="pure-u-1-2">
-            <div class="paragraphright">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-          </div>
-
+        <div id="LineChart">
+          <script type="text/javascript">
+            var spec4 = "js/LineChart.vg.json";
+            vegaEmbed('#LineChart', spec4).then(function (result) {
+              // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+          </script>
         </div>
+
+      </div>
+
+      <div class="pure-u-1-2">
+        <div class="paragraphright">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </body>

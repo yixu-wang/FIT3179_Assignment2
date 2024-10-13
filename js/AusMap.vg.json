@@ -4,7 +4,9 @@
   "height": 400,
   "title": {
     "text": "Alcohol consumption by region (Statistical Area 4)",
-    "subtitle": "Proportion of risky drinkers (more than 10 standard drinks per week or 4 standard drinks on a single day)",
+    "subtitle": "Proportion of risky drinkers",
+    "subtitleFontSize": 15,
+    "subtitlePadding": 10,
     "fontSize": 18,
     "offset": 20
   },
@@ -107,9 +109,9 @@
           }
         },
         "tooltip": [
-          {"field": "SA4_Name", "title": "Region:", "type": "nominal"},
-          {"field": "Year"},
-          {"field": "Proportion_frac", "type": "quantitative","format":".1%"}
+          {"field": "SA4_Name", "title": "Region: ", "type": "nominal"},
+          {"field": "Year", "title": "Year: "},
+          {"field": "Proportion_frac", "type": "quantitative","format":".1%", "title": "Proportion: "}
         ]
       }
     }
